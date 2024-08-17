@@ -1,3 +1,7 @@
 module.exports = function reverse (n) {
-  return parseFloat(n.toString().split('').reverse().join('')) * Math.sign(n);
+  if (n<0) {
+    return ((-1)*n).toString().split('').reverse().join('');
+  } else {
+    return n.toString().split('').reverse().join('');
+  }
 }
